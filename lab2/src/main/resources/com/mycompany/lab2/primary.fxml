@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="403.0" prefWidth="530.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lab2.PrimaryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </MenuBar>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#kolor_nieb" onTouchPressed="#kolor_nieb" text="Niebieski">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Kolor" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#kolor_ziel" text="Zielony" toggleGroup="$Kolor" />
+                  <RadioButton mnemonicParsing="false" onAction="#kolor_czer" text="Czerwony" toggleGroup="$Kolor" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#liczba1" text="1">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="numer" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#liczba2" text="2" toggleGroup="$numer" />
+                  <RadioButton mnemonicParsing="false" onAction="#liczba3" text="3" toggleGroup="$numer" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" onAction="#show_1" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" onAction="#show_2" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" onAction="#show_3" text="CheckBox" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="labelcolor" prefHeight="17.0" prefWidth="194.0" text="Label" />
+      <ImageView fx:id="obrazek" fitHeight="150.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</VBox>
